@@ -43,9 +43,11 @@ public class DBSample {
             ResultSet rs = stmt.executeQuery("select * from people");
             
             while(rs.next()){
-                String name = rs.getString("name");
-                String Bio = rs.getString("bio");
-                output += "<p>"+name+" : "+Bio+" </p>"; 
+//                String name = rs.getString("name");
+//                String Bio = rs.getString("bio");
+//                output += "<p>"+name+" : "+Bio+" </p>"; 
+                output += "<h2>" +rs.getString("name")+"</h2>";
+                output += "<h2>" +rs.getString("bio")+"</h2>";
             }
             
             conn.close();
