@@ -51,7 +51,7 @@ public class DBSample {
             conn.close();
             
         } catch (SQLException ex) {
-            Logger.getLogger(DBSample.class.getName()).log(Level.SEVERE, null, ex);
+            output=ex.getMessage();
         }
         return output;
         
