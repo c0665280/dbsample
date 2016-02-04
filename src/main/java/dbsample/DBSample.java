@@ -24,10 +24,10 @@ public class DBSample {
             Logger.getLogger(DBSample.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        String host = System.getenv("OPENHOST_MYSQL_DB_HOST");
-        String port = System.getenv("OPENHOST_MYSQL_DB_PORT");
-        String username = System.getenv("OPENHOST_MYSQL_DB_USERNAME");
-        String password = System.getenv("OPENHOST_MYSQL_DB_PASSWORD");
+        String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+        String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+        String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+        String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
         String name = "dbsample";
         String url = "jdbc:mysql://" + host + ":" + port + "/" + name;
         return DriverManager.getConnection(url, username, password);
